@@ -1,0 +1,271 @@
+@import url(reset.css);
+
+
+@font-face {
+    font-family: 'DEIHN';
+    src: url(../fonts/DIEHN.ttf) format('truetype');
+     
+}
+
+html,body{
+    padding: 0;
+    margin: 0;
+    background: black;}
+
+
+
+
+
+/*Header, Main Menu-start*/
+
+#header-content{
+     height: 100px;
+    background: url(../Images/Header/headback.png); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:relative;
+}
+
+#header-content ul li a{
+    color:white;
+    text-decoration: none;
+    font-family: "DEIHN", sans-serif;
+    font-size: 20px;
+    
+}
+
+#header-content > ul > li {
+    display: inline-block;  
+}
+
+#header-content > ul:first-of-type > li:first-of-type{
+    padding-left: 65px;
+}
+
+.firstul{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.secondul{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#firstlogo {
+    height: 100px;
+    background-image: url(../Images/Header/logo.png);
+    width:175px;
+}
+
+#header-content > ul:last-of-type > li:last-of-type{
+    padding-right: 65px;
+}
+
+/*Header, Main Menu-end*/
+
+#video{
+    height: 600px; 
+}
+
+#slider{
+    height: 600px;
+    width:100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.fullscreen-bg_video{
+    
+    height: 600px;
+     background-size: cover;
+    min-width: 100%;
+    width: auto;
+    margin: auto;
+    
+}
+
+
+.item{
+    width:100%;
+    height: 600px;
+}
+
+
+
+/*logoundertheslider*/
+
+#logo{
+    width:100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    background: url(../Images/Main/logoback.png) no-repeat;
+    overflow:hidden;
+    
+
+    
+}
+
+.row:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.row { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.row { display: block; }
+/* close commented backslash hack */
+
+
+
+
+
+
+
+#logoel1{
+    width:108px;
+    background: url(../Images/Main/logoel1.png) no-repeat;
+   /* margin-left:240px; */
+    margin-top:10px; 
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+     overflow: hidden;
+    float: left;
+    margin-left: 170px;
+    
+    
+}
+
+#logoel2{
+    width:122px;
+    background: url(../Images/Main/logoel2.png) no-repeat;
+    margin-top:10px;
+  /*  margin-right: 770px; */
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+     overflow: hidden;
+    float: left;
+}
+
+#logoel3{
+    width:176px;
+    background: url(../Images/Main/logoel3.png) no-repeat;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    
+    
+}
+
+
+#logoel4{
+    width:275px;
+    background: url(../Images/Main/logoel4.png) no-repeat;
+    display: flex;
+    margin-right:224px;
+    display: flex;
+    justify-content: space-between;
+    margin-top:10px;
+    
+}
+
+/*Main div - events*/
+
+#event1{
+    background: green;
+    height: 600px;
+    background-size:cover;
+    position: relative;
+}
+
+#event2{
+    background: white;
+    height: 600px;
+    background-size:cover;
+    position: relative;
+}
+
+#event3{
+    background: black;
+    height: 600px;
+    background-size:cover;
+    position: relative;
+}
+
+#event4{
+    background: yellow;
+    height: 600px;
+    background-size:cover;
+    position:relative ;
+}
+
+#event5{
+    background: pink;
+    height: 600px;
+    background-size:cover;
+    position: relative;
+}
+
+#event6{
+    background: green;
+    height: 600px;
+    background-size:cover;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Main div. Earphone + 2nd Slider*/
+
+#earphone{
+    height:365px;
+    background: url(../Images/Main/Ear.png) no-repeat;
+    display: flex;
+    overflow:hidden;
+    
+}
+
+#slider2{
+    background: url(../Images/Main/slider2back.png) no-repeat;
+    height: 300px;
+    width: 1000px;
+    left: 27%;
+    top:10%;
+    overflow:hidden;
+}
+
+
+
+/*Footer*/
+
+#footer-content{
+    background: url(../Images/footer/dark_Tire.png);
+    height: 100px;
+    
+}
+
+.hidden { display: none; }
