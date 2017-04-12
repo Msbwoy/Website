@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function(){
     var event5 = document.querySelector('.event5');
     var event6 = document.querySelector('.event6');
     var eventItems =  document.getElementsByClassName('eventItem');
+    var eventSlider = document.getElementsByClassName('.eventSlider');
 
     var handler = function(event) {
         for(var i =0; i < eventItems.length; i++) {
@@ -19,13 +20,24 @@ document.addEventListener("DOMContentLoaded", function(){
         var divItem = document.getElementById(className);
         divItem.classList.remove('hidden');
     };
+    
+    var sliderinvis = function(event) {
+        for(var i=0; i < eventItems.length; i++){
+            eventItems[i].classList.add('hidden');
+            
+        }
+         var className1 = event.target.getAttribute('class');
+         var divItem1 = document.getElementById(className1);
+         divItem1.classList.add('hidden');
+       
+    }
 
-    event1.addEventListener('click', handler);
-    event2.addEventListener('click', handler);
-    event3.addEventListener('click', handler);
-    event4.addEventListener('click', handler);
-    event5.addEventListener('click', handler);
-    event6.addEventListener('click', handler);
+    event1.addEventListener('click', handler, sliderinvis);
+    event2.addEventListener('click', handler, sliderinvis);
+    event3.addEventListener('click', handler, sliderinvis);
+    event4.addEventListener('click', handler, sliderinvis);
+    event5.addEventListener('click', handler, sliderinvis);
+    event6.addEventListener('click', handler, sliderinvis);
 });
 
 

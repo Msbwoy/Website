@@ -67,8 +67,9 @@ html,body{
 
 /*Header, Main Menu-end*/
 
-#video{
-    height: 600px; 
+#videoplayer{
+    height: 600px;
+    width: 100%;
 }
 
 #slider{
@@ -97,6 +98,7 @@ html,body{
 
 
 
+
 /*logoundertheslider*/
 
 #logo{
@@ -119,6 +121,7 @@ html,body{
   clear: both;
   height: 0;
 }
+
 .row { display: inline-block; }
 /* start commented backslash hack \*/
 * html .clearfix { height: 1%; }
@@ -268,4 +271,7 @@ html,body{
     
 }
 
-.hidden { display: none; }
+.hidden{
+    display: none;
+}
+
