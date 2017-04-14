@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(){
     var event5 = document.querySelector('.event5');
     var event6 = document.querySelector('.event6');
     var eventItems =  document.getElementsByClassName('eventItem');
-    var eventSlider = document.getElementsByClassName('.eventSlider');
+    var eventSlider = document.getElementsByClassName('eventSlider');
 
     var handler = function(event) {
         for(var i =0; i < eventItems.length; i++) {
@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function(){
     };
     
     var sliderinvis = function(event) {
-        for(var i=0; i < eventItems.length; i++){
-            eventItems[i].classList.add('hidden');
+        for(var i=0; i < eventSlider.length; i++){
+            eventSlider[i].classList.add('hidden');
             
         }
          var className1 = event.target.getAttribute('class');
@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function(){
     event4.addEventListener('click', handler, sliderinvis);
     event5.addEventListener('click', handler, sliderinvis);
     event6.addEventListener('click', handler, sliderinvis);
+    
+    
 });
 
 
@@ -76,4 +78,75 @@ $('#slider').slick({
 });
 
 
+
+//videoplayer
+
+$(document).ready(function(){
+  // My source video
+	var vimeoUrl = '/Volumes/500GB/Numass1v/Videos/My Movie.mp4';
+
+	var $video = $('<video>').attr('src', vimeoUrl);
+	var video = $video[0];
+
+	var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+	var loaded = false;
+
+
+	$('.playbutton').on('click', function(e){
+		e.preventDefault();
+
+		var $button = $(this);
+		var $holder = $(this).parent();
+		var state = $button.hasClass('paused') ? 'paused' 	:
+					$button.hasClass('playing') ? 'playing' :
+					'loading';
+
+		if( state == 'loading'){
+			$holder.prepend($video);
+
+			if( isMobile ){
+				video.play();
+				$button.addClass('playing');
+				return;
+			}
+
+			$button.addClass('loading');
+
+			if( loaded ){
+				$button.addClass('playing');
+				video.play();
+			}
+
+			video.load();
+
+			$video.on('canplay', function(){
+				loaded = true;
+				$button.addClass('playing');
+				$button.removeClass('loading');
+				video.play();	
+			});
+
+			$video.on('ended', function(){
+				$button.removeClass('playing');
+			});
+
+			return;
+		}
+
+		if( state === 'playing' ){
+			video.pause();
+			$button.addClass('paused');
+
+			return;
+		}
+
+		if( state === 'paused' ){
+			video.play();
+			$button.removeClass('paused');
+
+			return;
+		}
+
+	})
+})
 
